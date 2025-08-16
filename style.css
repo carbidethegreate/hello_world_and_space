@@ -1,147 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cowboy Monkey Space Tours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="https://www.kindpng.com/picc/m/66-663612_ftestickers-cute-monkey-astronaut-space-astronaut-monkey-png.png" alt="Cowboy Monkey in Space" class="hero-image" />
+    <div class="overlay">
+      <h1>Out-of-this-world Adventures for Cowboy Monkeys</h1>
+      <p>Hop on a rocket made of bananas and experience space like never before.</p>
+      <a href="#packages" class="btn">Book Your Adventure</a>
+    </div>
+    <div class="rocket"></div>
+    <div class="bananas"></div>
+  </header>
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Trebuchet MS', sans-serif;
-  color: #f5f5f5;
-  background: #0a132d;
-  line-height: 1.6;
-}
+  <section id="packages">
+    <h2>Our Packages</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Lunar Lasso</h3>
+        <p>Ride to the Moon and practice roping in low gravity.</p>
+      </div>
+      <div class="card">
+        <h3>Martian Rodeo</h3>
+        <p>Test your rodeo skills against Martian dust devils.</p>
+      </div>
+      <div class="card">
+        <h3>Galactic Roundup</h3>
+        <p>A grand tour of the Milky Way rounding up stars and planets.</p>
+      </div>
+    </div>
+  </section>
 
-/* Hero section with parallax and starry background */
-.hero {
-  position: relative;
-  height: 100vh;
-  background:
-    radial-gradient(white 1px, transparent 1px) 0 0/2px 2px,
-    radial-gradient(white 1px, transparent 1px) 1px 1px/3px 3px,
-    linear-gradient(180deg, #051429 0%, #09224d 100%);
-  background-attachment: fixed, fixed, scroll;
-  background-position: 0 0, 1px 1px, center;
-  background-size: 2px 2px, 3px 3px, cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+  <section id="video">
+    <h2>Watch the Launch</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dQo7BI_VYFA" title="Rocket Launch" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
 
-.hero .overlay {
-  text-align: center;
-  max-width: 800px;
-  padding: 0 1rem;
-}
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Ready to suit up? Send us an email at <a href="mailto:spacecowboymonkeyspacetours.com">spacecowboymonkeyspacetours.com</a> or call (555) 321-9876.</p>
+  </section>
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  background: #ffcf56;
-  color: #0a132d;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #ffd973;
-}
-
-/* Rocket animation */
-.rocket::after {
-content🚀"🚀";
-  content: "🚀";
-
-  font-size: 3rem;
-  position: absolute;
-  content: "\ud83d\ude80"; 0;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: launch 6s linear infinite;
-}
-@keyframes launch {
-  0% {
-    bottom: -3rem;
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    bottom: 110vh;
-    opacity: 0;
-  }
-}
-
-/* Banana base at bottom */
-.bananas::after {
-  content: "🍌🍌🍌🍌🍌🍌";
-  font-size: 2rem;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Sections */
-section {
-  padding: 4rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-#packages .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.card {
-  background: #0f2a49;
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 250px;
-}
-
-#video .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-#video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #051429;
-  font-size: 0.9rem;
-}
-
-
-/* v=2025-08-16b */
-.rocket::after { content: "🚀"; }
-.bananas::after { content: "🍌🍌🍌"; }
-
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll, scroll, scroll;
-  }
-}
+  <footer>
+    <p>&copy; 2025 Cowboy Monkey Space Tours. All rights reserved.</p>
+  </footer>
+</body>
+</html>
