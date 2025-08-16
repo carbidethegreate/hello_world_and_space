@@ -1,57 +1,132 @@
-/* Styles for Cowboy Monkey Space Tours */
+/* Base resets */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #1e3c72, #2a5298);
-    color: #fff;
-    line-height: 1.6;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #f5f5f5;
+  background: #0a132d;
+  line-height: 1.6;
 }
-header {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    text-align: center;
-}
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-header p {
-    font-size: 1.2rem;
-}
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-section {
-    margin-bottom: 2rem;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 1.5rem;
-    border-radius: 10px;
-}
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #ffd700;
-}
-section ul {
-    list-style: none;
-    padding-left: 0;
 
-/* Banner of bananas */
-.hero-banner {
-  font-size: 3rem;
+/* Hero section with parallax and starry background */
+.hero {
+  position: relative;
+  height: 100vh;
+  background:
+    radial-gradient(white 1px, transparent 1px) 0 0/2px 2px,
+    radial-gradient(white 1px, transparent 1px) 1px 1px/3px 3px,
+    linear-gradient(180deg, #051429 0%, #09224d 100%);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero .overlay {
   text-align: center;
-  margin: 1rem 0;
+  max-width: 800px;
+  padding: 0 1rem;
 }
 
-section li {
-    margin-bottom: 0.8rem;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffcf56;
+  color: #0a132d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #ffd973;
+}
+
+/* Rocket animation */
+.rocket::after {
+  content: "🚀";
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: launch 6s linear infinite;
+}
+@keyframes launch {
+  0% {
+    bottom: -3rem;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 110vh;
+    opacity: 0;
+  }
+}
+
+/* Banana base at bottom */
+.bananas::after {
+  content: "🍌🍌🍌🍌🍌🍌";
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Sections */
+section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#packages .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.card {
+  background: #0f2a49;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+#video .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+#video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 footer {
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 2rem;
+  background: #051429;
+  font-size: 0.9rem;
 }
