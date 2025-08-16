@@ -1,4 +1,4 @@
-/* Base resets */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Trebuchet MS', sans-serif;
@@ -53,10 +53,12 @@ body {
 
 /* Rocket animation */
 .rocket::after {
+content🚀"🚀";
   content: "🚀";
+
   font-size: 3rem;
   position: absolute;
-  bottom: 0;
+  content: "\ud83d\ude80"; 0;
   left: 50%;
   transform: translateX(-50%);
   animation: launch 6s linear infinite;
@@ -130,3 +132,8 @@ footer {
   background: #051429;
   font-size: 0.9rem;
 }
+
+
+/* v=2025-08-16b */
+.rocket::after { content: "🚀"; }
+.bananas::after { content: "🍌🍌🍌"; }
